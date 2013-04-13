@@ -1,0 +1,18 @@
+!TRNS	DATE	ACCNT	NAME	CLASS	AMOUNT	MEMO
+!SPL	DATE	ACCNT	NAME	AMOUNT	MEMO
+!ENDTRNS
+TRNS	"03/20/2013"	"Zions"	"DEPOSIT"	"Zions Bank Transaction - Credit"	"100"	"DEPOSIT"
+SPL	"03/20/2013"	"Zions Credit"	"DEPOSIT"	"100"	"DEPOSIT"
+ENDTRNS
+TRNS	"04/09/2013"	"Zions"	"Some Description"	"Zions Bank Transaction - Credit"	"1000"	"More Description"
+SPL	"04/09/2013"	"Zions Credit"	"Some Description"	"1000"	"More Description"
+ENDTRNS
+TRNS	"04/09/2013"	"Zions"	"Some Description"	"Zions Bank Transaction - Credit"	"100"	"More Description"
+SPL	"04/09/2013"	"Zions Credit"	"Some Description"	"100"	"More Description"
+ENDTRNS
+TRNS	"04/09/2013"	"Zions"	"Some Description"	"Zions Bank Transaction - Debit"	"10"	"More Description"
+SPL	"04/09/2013"	"Zions Debit"	"Some Description"	"10"	"More Description"
+ENDTRNS
+TRNS	"04/10/2013"	"Zions"	"Some Description"	"Zions Bank Transaction - Credit"	"7000"	"More Description"
+SPL	"04/10/2013"	"Zions Credit"	"Some Description"	"7000"	"More Description"
+ENDTRNS

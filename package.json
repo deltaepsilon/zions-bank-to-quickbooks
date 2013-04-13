@@ -1,0 +1,16 @@
+{
+  "name": "ZionsBankToQuickbooks",
+  "version": "0.0.0",
+  "description": "Import ZionsBank downloads into Quickbooks using the iif format.",
+  "main": "zions",
+  "scripts": {
+    "test": "node zions download.csv"
+  },
+  "repository": "",
+  "author": "Christopher Esplin",
+  "license": "BSD",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "*"
+  }
+}

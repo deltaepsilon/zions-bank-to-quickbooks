@@ -1,0 +1,15 @@
+
+
+
+
+
+
+"Account Type","Nickname","Account ID","Description","Balance","Bank Name","Bank ID",
+"CHECKING","Basic Business Checking","xxx-xx123-4","Basic Business Checking","1234","Zions Bank","123456789",
+,"Posted Date","Description","Amount","Currency","Transaction Reference Number","FI Transaction Reference","Payee","Transaction Code","Server ID","Sic Code","Type","Credit/Debit","Origination Date","Available Date","Original Amount","Original Currency",
+,"2013-03-20 00:00:01.0","DEPOSIT","100","USD","null","20130321014331377519","DEPOSIT","352","F113032094944010530C",,"Deposit","Credit","2013-03-20 00:00:01.0",,,,
+,"2013-04-09 00:00:01.0","Some Description","1000","USD","1234567","1234579","More Description","222",,,"Deposit","Credit","2013-04-09 00:00:01.0",,,,
+,"2013-04-09 00:00:02.0","Some Description","100","USD","2345678","12345789","More Description","222",,,"Deposit","Credit","2013-04-09 00:00:02.0",,,,
+,"2013-04-09 00:00:03.0","Some Description","10","USD","3456789","123456789","More Description","631",,,"Debit","Debit","2013-04-09 00:00:03.0",,,,
+,"2013-04-10 00:00:01.0","Some Description","7000","USD","0123456","123456789","More Description","222",,,"Deposit","Credit","2013-04-10 00:00:01.0",,,,
+
