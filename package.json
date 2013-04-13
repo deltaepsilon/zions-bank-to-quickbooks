@@ -1,16 +1,28 @@
 {
-  "name": "ZionsBankToQuickbooks",
+  "name": "zions-bank-to-quickbooks",
   "version": "0.0.0",
   "description": "Import ZionsBank downloads into Quickbooks using the iif format.",
   "main": "zions",
   "scripts": {
     "test": "node zions download.csv"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:deltaepsilon/zions-bank-to-quickbooks.git"
+  },
+  "main": "zions",
+  "scripts": {
+    "watch": "grunt watch"
+  },
   "author": "Christopher Esplin",
   "license": "BSD",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-watch": "*"
+  },
+  "keywords": ["zions", "bank", "quickbooks"],
+  "preferGlobal": "true",
+  "bin": {
+    "zions": "zions.js"
   }
 }

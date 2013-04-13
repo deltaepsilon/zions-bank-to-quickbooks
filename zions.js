@@ -1,7 +1,9 @@
+#! /usr/bin/env node
 var path = process.argv[1],
 	file = process.argv[2],
 	fs = require('fs'),
-	destination = __dirname + '/result.iif';
+	source = process.cwd() + '/' + file,
+	destination = process.cwd() + '/result.iif';
 if (!file) {
 	return console.log("You're going to need to specify a .csv file to process, or this will go nowhere.");
 }
@@ -9,7 +11,7 @@ if (!file) {
 function main () {
 	// console.log()
 	// console.log(path, file, process.argv);
-	var csv = fs.readFileSync( __dirname + '/' + file, 'utf8'),
+	var csv = fs.readFileSync(source, 'utf8'),
 		lines = csv.split('\n'),
 		i = lines.length,
 		split,
@@ -21,7 +23,6 @@ function main () {
 		split = lines[i].split(',');
 		if (split.length === 18 && split[1].replace(regex, '') !== "Posted Date") {
 			date = split[1].match(/(\d{4})-(\d{2})-(\d{2})/);
-			console.log(date)
 			cleaned.push({
 				DATE: date[2] + '/' + date[3] + '/' + date[1],
 				ACCNT: "Zions",
@@ -47,7 +48,7 @@ function format (transactions) {
 		transaction = transactions[i];
 		text = "";
 		text += 'TRNS\t"' + transaction.DATE + '"\t"' + transaction.ACCNT + '"\t"' + transaction.NAME + '"\t"' + transaction["CLASS"] + '"\t"' + transaction.AMOUNT  + '"\t"' +  transaction.MEMO  + '"\n';
-		text += 'SPL\t"' + transaction.DATE  + '"\t"' + transaction.secondaryACCNT + '"\t"' + transaction.NAME + '"\t"' + transaction.AMOUNT + '"\t"' + transaction.MEMO + '"\n';
+		text += 'SPL\t"' + transaction.DATE  + '"\t"' + transaction.secondaryACCNT + '"\t"' + transaction.NAME + '"\t"' + -1 * transaction.AMOUNT + '"\t"' + transaction.MEMO + '"\n';
 		text += "ENDTRNS\n";
 		fs.appendFileSync(destination, text);
 	}
@@ -55,3 +56,4 @@ function format (transactions) {
 
 
 main();
+console.log('Output sent to ' + destination);
